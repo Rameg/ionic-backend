@@ -1,4 +1,4 @@
-package com.venancio.springprj.services;
+package com.venancio.springprj.services.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException {
 

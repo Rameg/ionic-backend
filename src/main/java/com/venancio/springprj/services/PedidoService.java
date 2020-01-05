@@ -2,6 +2,7 @@ package com.venancio.springprj.services;
 
 import com.venancio.springprj.domain.Pedido;
 import com.venancio.springprj.repositories.PedidoRepository;
+import com.venancio.springprj.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
