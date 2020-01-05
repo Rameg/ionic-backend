@@ -1,6 +1,7 @@
 package com.venancio.springprj.services;
 
 import com.venancio.springprj.domain.Categoria;
+import com.venancio.springprj.dto.CategoriaDTO;
 import com.venancio.springprj.repositories.CategoriaRepository;
 import com.venancio.springprj.services.exceptions.DataIntegrityException;
 import com.venancio.springprj.services.exceptions.ObjectNotFoundException;
@@ -52,5 +53,9 @@ public class CategoriaService {
     public Page findPage(Integer page, Integer linesPerPage, String orderby, String direction){
         PageRequest pageRequest = new PageRequest(page, linesPerPage, Sort.Direction.valueOf(direction), orderby);
         return repo.findAll(pageRequest);
+    }
+
+    public Categoria fromDTO(CategoriaDTO categoriaDTO){
+        return new Categoria(categoriaDTO.getId(), categoriaDTO.getNome());
     }
 }
