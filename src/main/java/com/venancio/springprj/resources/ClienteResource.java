@@ -2,10 +2,12 @@ package com.venancio.springprj.resources;
 
 import com.venancio.springprj.domain.Cliente;
 import com.venancio.springprj.dto.ClienteDTO;
+import com.venancio.springprj.dto.ClienteNewDTO;
 import com.venancio.springprj.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -28,7 +30,7 @@ public class ClienteResource {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Void> insert(@Valid @RequestBody ClienteDTO objtDTO){
+    public ResponseEntity<Void> insert(@Valid @RequestBody ClienteNewDTO objtDTO){
         Cliente obj = service.fromDTO(objtDTO);
         obj = service.insert(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().
