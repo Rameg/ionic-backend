@@ -10,14 +10,14 @@ import java.io.Serializable;
 public class FieldMessage implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private String filedName;
+    private String fieldName;
     private String message;
 
     public FieldMessage(){
     }
 
-    public FieldMessage(String filedName, String message) {
-        this.filedName = filedName;
+    public FieldMessage(String fieldName, String message) {
+        this.fieldName = fieldName;
         this.message = message;
     }
 }
