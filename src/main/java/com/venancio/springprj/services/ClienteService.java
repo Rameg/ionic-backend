@@ -59,7 +59,7 @@ public class ClienteService {
         try{
             clienteRepository.deleteById(id);
         }catch (DataIntegrityViolationException e){
-            throw new DataIntegrityException("Não é possivel excluir um Cliente que possua Pedidos.");
+            throw new DataIntegrityException("Não é possivel excluir um Cliente que possua Pedidos em andamento.");
         }
     }
 
