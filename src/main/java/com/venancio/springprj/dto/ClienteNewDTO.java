@@ -2,6 +2,7 @@ package com.venancio.springprj.dto;
 
 import com.venancio.springprj.domain.Cliente;
 import com.venancio.springprj.services.validation.ClienteInsert;
+import com.venancio.springprj.services.validation.ClienteUpdate;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
@@ -13,6 +14,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @ClienteInsert
+@ClienteUpdate
 public class ClienteNewDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
